@@ -1,2 +1,2 @@
 # ocl_oid
-OCL OpenId configuration and implementation
+OCL OpenID configuration and implementation
