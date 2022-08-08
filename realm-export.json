@@ -33,7 +33,7 @@
   "verifyEmail": true,
   "loginWithEmailAllowed": true,
   "duplicateEmailsAllowed": false,
-  "resetPasswordAllowed": false,
+  "resetPasswordAllowed": true,
   "editUsernameAllowed": false,
   "bruteForceProtected": false,
   "permanentLockout": false,
@@ -1362,6 +1362,14 @@
   "components": {
     "org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy": [
       {
+        "id": "a7a0c34c-5734-4cee-b102-6c72df784aea",
+        "name": "Consent Required",
+        "providerId": "consent-required",
+        "subType": "anonymous",
+        "subComponents": {},
+        "config": {}
+      },
+      {
         "id": "81a60a03-8813-4091-b58f-a9b19fbc0e8c",
         "name": "Allowed Protocol Mapper Types",
         "providerId": "allowed-protocol-mappers",
@@ -1379,34 +1387,6 @@
             "oidc-sha256-pairwise-sub-mapper"
           ]
         }
-      },
-      {
-        "id": "41777775-c915-4c0d-a41d-2e44068fed1d",
-        "name": "Full Scope Disabled",
-        "providerId": "scope",
-        "subType": "anonymous",
-        "subComponents": {},
-        "config": {}
-      },
-      {
-        "id": "1949cc1a-279d-4570-a1b6-877c320dbae2",
-        "name": "Allowed Client Scopes",
-        "providerId": "allowed-client-templates",
-        "subType": "anonymous",
-        "subComponents": {},
-        "config": {
-          "allow-default-scopes": [
-            "true"
-          ]
-        }
-      },
-      {
-        "id": "a7a0c34c-5734-4cee-b102-6c72df784aea",
-        "name": "Consent Required",
-        "providerId": "consent-required",
-        "subType": "anonymous",
-        "subComponents": {},
-        "config": {}
       },
       {
         "id": "8efe10ad-80ac-448b-aa59-cdd93d38c61e",
@@ -1452,6 +1432,26 @@
         }
       },
       {
+        "id": "41777775-c915-4c0d-a41d-2e44068fed1d",
+        "name": "Full Scope Disabled",
+        "providerId": "scope",
+        "subType": "anonymous",
+        "subComponents": {},
+        "config": {}
+      },
+      {
+        "id": "1949cc1a-279d-4570-a1b6-877c320dbae2",
+        "name": "Allowed Client Scopes",
+        "providerId": "allowed-client-templates",
+        "subType": "anonymous",
+        "subComponents": {},
+        "config": {
+          "allow-default-scopes": [
+            "true"
+          ]
+        }
+      },
+      {
         "id": "625e6933-82a2-4666-9177-b56964712f08",
         "name": "Trusted Hosts",
         "providerId": "trusted-hosts",
@@ -1465,14 +1465,6 @@
             "true"
           ]
         }
-      }
-    ],
-    "org.keycloak.userprofile.UserProfileProvider": [
-      {
-        "id": "189de385-b735-46d4-b925-357775bff3a6",
-        "providerId": "declarative-user-profile",
-        "subComponents": {},
-        "config": {}
       }
     ],
     "org.keycloak.keys.KeyProvider": [
