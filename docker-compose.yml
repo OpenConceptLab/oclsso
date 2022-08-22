@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14.2-alpine
+    restart: "always"
+    shm_size: "128mb"
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASSWORD-Postgres123}
+    healthcheck:
+      test: "pg_isready -U postgres"
+    volumes:
+      - postgres-data:/usr/share/postgres/data
+  oid:
+    image: ocloid:latest
+    build: .
+    depends_on:
+      - db
+    ports:
+      - 8443:8443
+      # Use when behind load balancer with SSL
+      #- 8080:8080
+    healthcheck:
+      test: curl --silent --fail --insecure https://localhost:8443/health/ || exit 1
+    environment:
+      - KC_DB_URL=jdbc:postgresql://db:5432/
+      - KC_DB_USERNAME=postgres
+      - KC_DB_PASSWORD=${DB_PASSWORD-Postgres123}
+      - KC_HOSTNAME=localhost
+      # Use when behind load balancer with SSL
+      #- KC_PROXY=edge
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=Admin123
+
+volumes:
+  postgres-data:
