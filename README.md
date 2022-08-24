@@ -1,2 +1,2 @@
-# ocl_oid
-OCL OpenID configuration and implementation
+# oclsso
+OCL SSO configuration and implementation
