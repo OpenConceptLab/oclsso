@@ -11,8 +11,8 @@ services:
       test: "pg_isready -U postgres"
     volumes:
       - postgres-data:/usr/share/postgres/data
-  oid:
-    image: openconceptlab/ocloid:nightly
+  sso:
+    image: openconceptlab/oclsso:nightly
     build: .
     depends_on:
       - db
