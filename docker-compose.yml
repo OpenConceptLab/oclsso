@@ -19,9 +19,10 @@ services:
     ports:
       - 8443:8443
       # Use when behind load balancer with SSL
-      #- 8080:8080
+      #- 8100:8100
     healthcheck:
       test: curl --silent --fail --insecure https://localhost:8443/health/ || exit 1
+    command: ["start", "--optimized", "--import-realm", "--http-port 8100"]
     environment:
       - KC_DB_URL=jdbc:postgresql://db:5432/
       - KC_DB_USERNAME=postgres
