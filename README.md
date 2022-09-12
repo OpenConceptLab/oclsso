@@ -20,7 +20,7 @@ OCL SSO configuration and implementation
   - Implicit Flow Enabled: on
   - Direct Access Grants Enabled: on
   - Valid Redirect URIs: Client URIs, for example -- https://api.dev.openconceptlab.org/* and https://app.dev.openconceptlab.org/*
-  - Web Origins: http://localhost:4000/*
+  - Web Origins: TermBrowser URI -- http://app.dev.openconceptlab.org:4000/*
   - Authentication Flow Overrides:
     - Browser Flow: browser
     - Driect Grant Flow: direct grant
