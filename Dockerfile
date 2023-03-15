@@ -7,7 +7,11 @@ ENV KC_DB=postgres
 
 # Install custom providers
 RUN curl -sL https://github.com/aerogear/keycloak-metrics-spi/releases/download/2.5.3/keycloak-metrics-spi-2.5.3.jar -o /opt/keycloak/providers/keycloak-metrics-spi-2.5.3.jar
+# Needed for cache-stack=ec2
 RUN curl -sL https://repo1.maven.org/maven2/org/jgroups/aws/jgroups-aws/2.0.1.Final/jgroups-aws-2.0.1.Final.jar -o /opt/keycloak/providers/jgroups-aws-2.0.1.Final.jar
+RUN curl -sL https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-core/1.12.426/aws-java-sdk-core-1.12.426.jar -o /opt/keycloak/providers/aws-java-sdk-core-1.12.426.jar
+RUN curl -sL https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-s3/1.12.426/aws-java-sdk-s3-1.12.426.jar -o /opt/keycloak/providers/aws-java-sdk-s3-1.12.426.jar
+RUN curl -sL https://repo1.maven.org/maven2/joda-time/joda-time/2.12.2/joda-time-2.12.2.jar -o /opt/keycloak/providers/joda-time-2.12.2.jar
 
 RUN /opt/keycloak/bin/kc.sh build --cache=ispn --cache-stack=ec2
 
