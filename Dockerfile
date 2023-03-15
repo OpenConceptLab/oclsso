@@ -7,6 +7,8 @@ ENV KC_DB=postgres
 
 # Install custom providers
 RUN curl -sL https://github.com/aerogear/keycloak-metrics-spi/releases/download/2.5.3/keycloak-metrics-spi-2.5.3.jar -o /opt/keycloak/providers/keycloak-metrics-spi-2.5.3.jar
+RUN curl -sL https://repo1.maven.org/maven2/org/jgroups/aws/jgroups-aws/2.0.1.Final/jgroups-aws-2.0.1.Final.jar -o /opt/keycloak/providers/jgroups-aws-2.0.1.Final.jar
+
 RUN /opt/keycloak/bin/kc.sh build --cache=ispn --cache-stack=ec2
 
 FROM quay.io/keycloak/keycloak:19.0.1
