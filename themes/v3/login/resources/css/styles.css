@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto', sans-serif !important
+}
+
+.login-pf {
+    background: #f6f2f7;
+}
+.login-pf body {
+    background: #f6f2f7;
+    .login-pf-page {
+        display: flex;
+        height: 100%;
+    }
+    .login-pf-page-header {
+        display: none;
+    }
+    .card-pf {
+        margin: auto;
+        width: 420px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 24px;
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+    }
+}
+#kc-locale ul {
+    background-color: #FFF;
+    background-color: var(--pf-global--BackgroundColor--100);
+    display: none;
+    top: 20px;
+    min-width: 100px;
+    padding: 0;
+}
+#logo.logo-container {
+    display: inline-block;
+}
+
+#kc-locale-dropdown{
+    display: inline-block;
+    float: right;
+}
+
+#kc-locale-dropdown:hover ul {
+    display:block;
+}
+
+/* IE compatibility */
+#kc-locale-dropdown a {
+    color: #6A6E73;
+    color: var(--pf-global--Color--200);
+    font-size: 14px;
+    font-size: var(--pf-global--FontSize--sm);
+}
+
+/* IE compatibility */
+a#kc-current-locale-link::after {
+    content: "\2c5";
+    margin-left: 4px;
+    margin-left: var(--pf-global--spacer--xs)
+}
+.pf-c-button.pf-m-primary {
+    background-color: #4836ff;
+    padding: 10px;
+    min-width: 92px;
+    max-width: 120px;
+    border-radius: 100px;
+}
+
+#kc-form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    > div > span > a {
+        color: #4836ff;
+        font-weight: 500;
+        font-size: 14px;
+    }
+}
+#kc-form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > div > span > a {
+        color: #4836ff;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    #kc-form-buttons {
+        justify-content: right;
+        padding: 0;
+    }
+}
+
+
+#kc-registration {
+    > span > a {
+        color: #4836ff;
+        font-size: 14px;
+    }
+}
+
+#kc-page-title {
+    margin-top: 24px;
+}
+
+a, a:hover {
+    color: #4836ff;
+    font-weight: 500;
+    font-size: 14px;
+}
