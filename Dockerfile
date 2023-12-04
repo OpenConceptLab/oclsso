@@ -21,7 +21,7 @@ WORKDIR /opt/keycloak
 # For local access only
 RUN keytool -genkeypair -storepass password -storetype PKCS12 -keyalg RSA -keysize 2048 -dname "CN=server" -alias server -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -keystore conf/server.keystore
 
-COPY ./themes/ocl themes/ocl
+COPY ./themes themes
 COPY ./ocl-realm.json data/import/ocl-realm.json
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
