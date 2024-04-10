@@ -9,7 +9,7 @@ OCL SSO configuration and implementation
   - Verify email: on
   - Login with email: on
 - Email:
-  - SMPT settings for sending out mails from KeyCloak for verify-email/forgot-password.
+  - SMTP settings for sending out mails from KeyCloak for verify-email/forgot-password.
 - Tokens:
   - Access Token Lifespan as per needed
 
