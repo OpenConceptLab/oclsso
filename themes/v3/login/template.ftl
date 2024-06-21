@@ -44,6 +44,7 @@
     </div>
     <div class="${properties.kcFormCardClass!}">
         <header class="${properties.kcFormHeaderClass!}">
+            <div style="font-size: 10px;margin-bottom: -10px;text-align: center;">${realm.displayName}</div>
             <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
                 <div class="${properties.kcLocaleMainClass!}" id="kc-locale">
                     <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
