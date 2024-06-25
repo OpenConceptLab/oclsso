@@ -42,9 +42,9 @@
         <div id="kc-header-wrapper"
              class="${properties.kcHeaderWrapperClass!}">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
     </div>
+
     <div class="${properties.kcFormCardClass!}">
         <header class="${properties.kcFormHeaderClass!}">
-            <div style="font-size: 10px;margin-bottom: -10px;text-align: center;">${realm.displayName}</div>
             <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
                 <div class="${properties.kcLocaleMainClass!}" id="kc-locale">
                     <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
@@ -109,6 +109,7 @@
                 </div>
             </#if>
         </#if>
+        <div style="font-size: 10px;text-align: center;">${realm.displayName}</div>
       </header>
       <div id="kc-content">
         <div id="kc-content-wrapper">
