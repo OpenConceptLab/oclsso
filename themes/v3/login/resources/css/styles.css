@@ -108,10 +108,35 @@ a#kc-current-locale-link::after {
 
 #kc-page-title {
     margin-top: 24px;
+    text-align: left;
 }
 
 a, a:hover {
     color: #4836ff;
     font-weight: 500;
     font-size: 14px;
+}
+
+div.env-container {
+    margin-top: 24px;
+    display: flex !important;
+    align-items: center !important;
+    height: 48px;
+    align-self: stretch;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f2efff;
+    color: #4836ff;
+    letter-spacing: 0.25px;
+    text-align: left;
+    span#env-icon {
+        font-size: 18px;
+        margin-right: 8px;
+    }
 }

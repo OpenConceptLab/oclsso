@@ -109,7 +109,10 @@
                 </div>
             </#if>
         </#if>
-        <div style="font-size: 10px;text-align: center;">${realm.displayName}</div>
+        <div class='env-container'>
+          <span id='env-icon' class="${properties.kcFeedbackErrorIcon!}"></span>
+          <span id='env-text'>Environment: ${realm.displayName}</span>
+        </div>
       </header>
       <div id="kc-content">
         <div id="kc-content-wrapper">
