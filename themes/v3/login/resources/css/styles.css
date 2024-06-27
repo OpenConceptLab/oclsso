@@ -68,7 +68,7 @@ a#kc-current-locale-link::after {
     background-color: #4836ff;
     padding: 10px;
     min-width: 92px;
-    max-width: 120px;
+    width: auto;
     border-radius: 100px;
     min-height: 40px;
 }
