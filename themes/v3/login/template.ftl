@@ -52,7 +52,13 @@
                     <img src="${url.resourcesPath}/img/favicon.svg" style="height: 40px; width: 80px;" />
                     </div>
                         <div id="kc-locale-dropdown" class="${properties.kcLocaleDropDownClass!}">
-                            <a href="#" id="kc-current-locale-link">${locale.current}</a>
+                            <a href="#">
+                            <span style="display:flex;align-items:center;">
+                        <span class="pf-icon pf-icon-globe-route" style="display:flex;align-items:center;" />
+                            <span style="display:flex;align-items:center;margin: 0 8px;text-transform:uppercase;">${locale.currentLanguageTag}</span>
+                        <span class="fa fa-fw fa-caret-down" style="display:flex;align-items:center;" />
+                        </span
+                            </a>
                             <ul class="${properties.kcLocaleListClass!}">
                                 <#list locale.supported as l>
                                     <li class="${properties.kcLocaleListItemClass!}">

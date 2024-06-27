@@ -70,6 +70,7 @@ a#kc-current-locale-link::after {
     min-width: 92px;
     max-width: 120px;
     border-radius: 100px;
+    min-height: 40px;
 }
 
 #kc-form-buttons {
@@ -139,4 +140,17 @@ div.env-container {
         font-size: 18px;
         margin-right: 8px;
     }
+}
+span.no-account-text {
+    display: flex;
+    height: 24px;
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #5e5c71;
 }
