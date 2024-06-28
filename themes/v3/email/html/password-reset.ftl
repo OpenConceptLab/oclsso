@@ -1,7 +1,7 @@
 <html>
   <body>
     <div style='background-color:#F6F2F7;padding:24px;font-size:14px;'>
-    <div style="padding:16px;background-color:#fff;border-radius:10px;box-shadow:0 4px 4px 0 rgba(0, 0, 0, 0.25);-webkit-box-shadow:0 4px 4px 0 rgba(0, 0, 0, 0.25);">
+    <div style="padding:16px;background-color:#fff;border-radius:10px;border:1px solid #EAEBED;box-shadow:0 4px 4px 0 rgba(0, 0, 0, 0.25);-webkit-box-shadow:0 4px 4px 0 rgba(0, 0, 0, 0.25);">
       ${kcSanitize(msg("passwordResetBodyHtml", link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration), user.email))?no_esc}
       </div>
     <div style="color:#B7B8BE;margin-top:16px;text-align:center;">
