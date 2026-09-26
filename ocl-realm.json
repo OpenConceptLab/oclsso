@@ -22,7 +22,7 @@
   "accessCodeLifespanUserAction": 300,
   "accessCodeLifespanLogin": 1800,
   "actionTokenGeneratedByAdminLifespan": 43200,
-  "actionTokenGeneratedByUserLifespan": 300,
+  "actionTokenGeneratedByUserLifespan": 3600,
   "oauth2DeviceCodeLifespan": 600,
   "oauth2DevicePollingInterval": 5,
   "enabled": true,
@@ -2361,7 +2361,13 @@
     "parRequestUriLifespan": "60",
     "clientSessionMaxLifespan": "0",
     "clientOfflineSessionIdleTimeout": "0",
-    "cibaInterval": "5"
+    "cibaInterval": "5",
+    "actionTokenGeneratedByUserLifespan.verify-email": "86400",
+    "actionTokenGeneratedByUserLifespan.idp-verify-account-via-email": "86400",
+    "actionTokenGeneratedByUserLifespan.reset-credentials": "3600",
+    "actionTokenGeneratedByUserLifespan-verify-email": "86400",
+    "actionTokenGeneratedByUserLifespan-idp-verify-account-via-email": "86400",
+    "actionTokenGeneratedByUserLifespan-reset-credentials": "3600"
   },
   "keycloakVersion": "19.0.1",
   "userManagedAccessAllowed": false,
