@@ -154,3 +154,11 @@ span.no-account-text {
     text-align: left;
     color: #5e5c71;
 }
+#kc-register-terms {
+    margin: 16px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.25px;
+    text-align: left;
+    color: #5e5c71;
+}

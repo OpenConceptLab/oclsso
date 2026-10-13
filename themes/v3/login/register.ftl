@@ -173,5 +173,9 @@
 
             </div>
         </form>
+        <#-- Creating an account means accepting the Terms of Use. The links open in a new tab, so the form keeps what was typed in it. -->
+        <#assign termsLink = '<a href="https://openconceptlab.org/terms-of-use" target="_blank" rel="noopener noreferrer">' + msg("termsOfUse") + '</a>'>
+        <#assign privacyLink = '<a href="https://openconceptlab.org/privacy-policy" target="_blank" rel="noopener noreferrer">' + msg("privacyPolicy") + '</a>'>
+        <p id="kc-register-terms">${msg("registerTermsNotice", termsLink, privacyLink)?no_esc}</p>
     </#if>
 </@layout.registrationLayout>
