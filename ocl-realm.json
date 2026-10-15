@@ -1497,9 +1497,10 @@
     "fromDisplayName": "",
     "user": "no-reply@openconceptlab.org"
   },
-  "loginTheme": "ocl",
+  "loginTheme": "v3",
   "accountTheme": "keycloak",
   "adminTheme": "keycloak",
+  "emailTheme": "v3",
   "eventsEnabled": false,
   "eventsListeners": [
     "jboss-logging"
@@ -1678,10 +1679,13 @@
       }
     ]
   },
-  "internationalizationEnabled": false,
+  "internationalizationEnabled": true,
   "supportedLocales": [
-    ""
+    "en",
+    "es",
+    "pt-BR"
   ],
+  "defaultLocale": "en",
   "authenticationFlows": [
     {
       "id": "4493850e-b4ad-46bf-9761-2b83e3306607",
