@@ -18,6 +18,12 @@ RUN /opt/keycloak/bin/kc.sh build --cache=ispn --cache-stack=ec2
 FROM quay.io/keycloak/keycloak:19.0.1
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 WORKDIR /opt/keycloak
+
+# emSign ECC Root CA - G3 was removed from CA bundles after the eMudhra key compromise
+USER root
+RUN keytool -delete -cacerts -storepass changeit -alias emsigneccrootca-g3
+USER 1000
+
 # For local access only
 RUN keytool -genkeypair -storepass password -storetype PKCS12 -keyalg RSA -keysize 2048 -dname "CN=server" -alias server -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -keystore conf/server.keystore
 
