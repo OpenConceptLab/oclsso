@@ -28,3 +28,7 @@ OCL SSO configuration and implementation
   - Client Authenticator: Client Id and Secret
 - Scope:
   - Full Scope Allowed: on
+
+## The OCL Digital Public Good
+
+This repository is not part of the [OCL Digital Public Good](https://github.com/OpenConceptLab/.github/blob/main/DIGITAL-PUBLIC-GOOD.md). That page lists the repositories that are.
